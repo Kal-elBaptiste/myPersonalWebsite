@@ -1,0 +1,149 @@
+/* THis makes padding included in div sizes instead of adding on after */
+* {
+    box-sizing: border-box;
+  }
+  
+/* Auto scroll is smooth instead of instant */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #473543;
+}
+
+nav {
+    background-color: #262125;
+}
+
+/* The carrot means to only apply to first child */
+nav > div {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+footer {
+    background-color: #262125;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+footer > nav > div {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+.main-content {
+    margin: auto;
+    /* OLD BG COLOR -> rgb(167, 167, 167)  */
+    background-color:#968a94;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.nav-link{
+    text-decoration: none;   /* removes underline */
+    color: inherit; /* Makes sure the link doesn't turn blue */
+}
+
+.image-container{
+    background-color: beige;
+    border-radius: 100px;
+}
+
+.image-wrapper {
+    display: inline-block; /* Makes div shrink to inside items */
+}
+
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.round-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.inline{
+    display: inline;
+}
+
+.list-item-container {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+#coder-for-life-div {
+    border-color: white;
+    border-width: 4px;
+}
+
+#identity{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Displays name on a line instead of wrapping */
+    width: 50%;
+    align-items: center;
+    padding-left: 40px;
+}
+
+#p5-div {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
+
+    width: 50%;
+    flex-direction: column;
+    align-items: center; /* Centers column items */
+}
+
+#interests {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 40px;
+    width: 50%;
+}
+
+#pfp {
+    width: 100%;
+}
+
+#start {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 40px;
+}
+
+#bottom-nav {
+    background-color: none;
+}
