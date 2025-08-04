@@ -103,3 +103,16 @@ profilePictureMover = setInterval(() => {
     }
 
 }, 16.67)
+
+
+let aspectRatio = window.innerWidth/window.innerHeight;
+
+if (aspectRatio < 1) {
+    console.log("Vertical view enabled")
+
+    let mainContents = document.getElementsByClassName("main-content");
+
+    for (let element of mainContents){
+        element.style.width = "90%";
+    } 
+}
