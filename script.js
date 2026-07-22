@@ -93,7 +93,8 @@ async function displayBlogPreviews(blogLink) {
 
   const blogContainer = document.querySelector("#blog-preview-container");
   for (let i = Object.keys(blogDict).length - 1; i >= 0; i--) {
-    singlePreview = document.createElement("div");
+    singlePreview = document.createElement("a");
+    singlePreview.setAttribute("href", "blog.html");
     singlePreview.classList = "blog-preview";
     if (blogDict[`blog${i}`][0]) {
       blogContainer.append(singlePreview);
@@ -126,3 +127,60 @@ async function displayBlogPreviews(blogLink) {
 }
 
 displayBlogPreviews(blogLink);
+
+let tvShowLinks = [
+  "images/tv/shows/animation camping GIF by Mathew Lucas .gif",
+  "images/tv/shows/design color GIF by gfaught.gif",
+  "images/tv/shows/Friday Night Dance GIF.gif",
+  "images/tv/shows/video game halloween GIF by gfaught.gif",
+  "images/tv/shows/Vintage 90S GIF by ruidovacio.gif",
+  "images/tv/shows/video game 3d GIF by nullbody.gif",
+  "images/tv/shows/Dance Wave GIF by LINE FRIENDS.gif",
+  "images/tv/shows/Pokemon Staring GIF.gif",
+  "images/tv/shows/Fight Boxing GIF by Paul Layzell.gif",
+  "images/tv/shows/mega man running GIF by Xbox.gif",
+  "images/tv/shows/New Wave 80S GIF.gif",
+  "images/tv/shows/Motivational GIF by Chibird.gif",
+  "images/tv/shows/through-screen.gif",
+  "images/tv/shows/pepe-wizard.gif",
+  "images/tv/shows/pong-video-game.gif",
+  "images/tv/shows/rhythm-heaven-rockers.gif",
+  "images/tv/shows/animation art GIF by Liaizon Wakest.gif",
+  "images/tv/shows/stars rainbows GIF.gif",
+  "images/tv/shows/terraria-dino-mowing.gif",
+  "images/tv/shows/lofi-girl-lofi.gif",
+  "images/tv/shows/tweaking-out-black-guy-tweaking-meme.gif",
+  "images/tv/shows/lockstep-rhythm-heaven.gif",
+  "images/tv/shows/barista-rhytmn-heaven.gif",
+  "images/tv/shows/jake-lofi.gif",
+  "images/tv/shows/cat.gif",
+  "images/tv/shows/gengar.gif",
+  "images/tv/shows/epic-face.webp",
+  "images/tv/shows/dance-excited.webp",
+];
+
+let tvScreen = document.getElementById("tv-screen");
+
+tvScreen.addEventListener("click", (e) => changeChannel(tvShowLinks));
+
+function changeChannel(showLinks) {
+  // 1. event.currentTarget gets the element clicked
+  const clickedElement = event.currentTarget;
+
+  // 2. Read the current 'data-clicks' value
+  // If not present, default to '0' -> string, not number
+  const currentCount = clickedElement.dataset.clicks || "0";
+
+  // 3.Set TV show based on currentCount -
+  clickedElement.setAttribute("src", showLinks[currentCount]);
+
+  // 3. Convert string to an integer and add 1
+  const newCount = parseInt(currentCount, 10) + 1;
+
+  // 4. Save the new count back onto the HTML tag!
+  clickedElement.dataset.clicks = newCount % showLinks.length;
+}
+
+function turnOffTV() {
+  tvScreen.setAttribute("src", "");
+}

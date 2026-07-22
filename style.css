@@ -3,12 +3,13 @@
 html {
   display: flex;
   justify-content: center;
-}
 
-body {
   cursor:
     url(https://github.com/ismailhromcik95/ismile.neocities.org/raw/refs/heads/main/MONS/assets/cursors/default.cur),
     default;
+}
+
+body {
   background-color: #502d55;
 
   font-family: "Roboto", sans-serif;
@@ -39,9 +40,7 @@ header {
 #footer-div {
   width: 100%;
   max-width: 1000px;
-}
 
-#header-div {
   display: flex;
   flex-direction: column;
 
@@ -55,7 +54,7 @@ header {
 }
 
 .dksl {
-  color: #935073;
+  color: #e9caa9;
 }
 
 #banner-div {
@@ -64,6 +63,7 @@ header {
   background-image: url("images/banners/Kalelium.png");
   background-image: url("images/banners/Kalelium-light-purple.png");
   background-image: url("images/banners/Kalelium-beige-purple.png");
+  background-image: url("images/banners/Kalelium-dot-beige-purple.png");
 
   background-size: cover;
   background-position: center;
@@ -160,9 +160,6 @@ nav p {
   margin-bottom: 4px;
 }
 
-#pic-and-info img {
-}
-
 #pic {
   width: 50%;
   min-width: 150px;
@@ -231,6 +228,11 @@ nav p {
   padding-left: 4px;
 
   width: 75%;
+}
+
+#filler-image {
+  background-image: url("images/backgrounds/grid background.jpg");
+  height: 100%;
 }
 
 .blurb-label-div h3 {
@@ -303,6 +305,40 @@ hr {
   width: 99px;
 }
 
+#tv-content-div {
+  display: flex;
+  justify-content: center;
+}
+
+#tv-div {
+  display: flex;
+  justify-content: center;
+
+  width: fit-content;
+  position: relative;
+}
+
+#tv-show-div {
+  position: absolute;
+  top: 75px;
+  left: 20px;
+}
+
+#tv-show-div img {
+  width: 200px;
+  height: 200px;
+
+  border-radius: 5px;
+}
+
+#instructions-div h3 {
+  color: #e9caa9;
+}
+
+#instructions-div li {
+  margin-bottom: 8px;
+}
+
 #blog-preview-container {
   display: flex;
   flex-direction: column;
@@ -356,6 +392,15 @@ hr {
 .footer-div {
   display: flex;
   flex-direction: column;
+}
+
+#web-button-div {
+  display: flex;
+  align-items: center;
+}
+
+#web-button-div img {
+  width: 88px;
 }
 
 /* Blog Specific */
@@ -449,6 +494,10 @@ img {
   .decoration {
     font-size: revert;
     font-size: 20px;
+  }
+
+  #filler-image {
+    display: none;
   }
 }
 
